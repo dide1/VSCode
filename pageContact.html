@@ -1,49 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <title>FemTech: Contact Us</title>
-</head>
-<body>
-    <header>
-		<div class="container">
-			<h1 class="logo">FemTech</h1>
-			<nav>
-				<ul>
-					<li><a href="pageHome.html">Home</a></li>
-					<li><a href="pageAbout.html">About</a></li>
-					<li><a href="pageSignUp.html">Sign Up</a></li>
-					<li><a href="pageContact.html">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+{% extends "layout.html" %}
 
-	<main>
-		<section class="contact">
-			<h2>Contact Us</h2>
-			<form>
-				<label for="name">Name:</label>
-				<input type="text" placeholder="First and Last Name" class="input-field" required>
+{% block title %}
+Contact Us
+{% endblock %}
 
-				<label for="email">Email:</label>
-				<input type="email" placeholder="Email" class="input-field" required>
+{% block main %}
 
-				<label for="message">Message:</label>
-				<textarea class="input-field" placeholder="Type your message here..." required></textarea>
+<div class="container my-5">
 
-				<button type="submit">Submit</button>
-			</form>
-		</section>
-	</main>
-    <footer>
-		<p>&copy; 2023 FemTech. All rights reserved.</p>
-	</footer>
-</body>
-</html>
+   <div class="p-5 p-md-3 mb-4 text-white rounded bg-dark my-4 mx-0">
+       <div class="col-md-8 px-0">
+         <h1 class="display-4 fst-italic">Contact us</h1>
+       </div>
+     </div>
+   
+   <form method="post" action="https://getform.io/f/d1ea678e-d0fb-4777-90c9-e2155cd91e1a">
+   
+      <div class="form-group my-4">
+       <label for="name">Name</label>
+       <input type="text" class="form-control"  id="name" placeholder="name" name="name">
+     </div>
+   
+     <div class="form-group my-4">
+       <label for="email">Email address</label>
+       <input type="email" class="form-control" id="email"  placeholder="name@example.com" name="email">
+     </div>
+   
+   
+   
+     <div class="form-group my-4">
+       <label for="desc">Message</label>
+       <textarea class="form-control" id="desc" rows="5" name="desc"></textarea>
+     </div>
+   
+     <button type="submit" class="btn btn-outline-dark">Submit</button>
+   
+   </form>
+   </div>
+   
+
+{% endblock %}
