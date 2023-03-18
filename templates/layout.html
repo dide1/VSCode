@@ -32,6 +32,8 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
+              {% if session %}
+
             <a class="nav-link active" id="home" href="/">Home</a>
             <button class="navbar-toggler">
             </button>
@@ -40,13 +42,32 @@
             <button class="navbar-toggler">
             </button>
 
-            <a class="nav-link active" id="login" href="/login">Login/ Logout</a>
+            <a class="nav-link active" id="login" href="/logout"> Logout</a>
             <button class="navbar-toggler">
             </button>
 
             <a class="nav-link active" id="contact" href="/contact">Face any issues? Contact us </a>
             <button class="navbar-toggler">
             </button>
+            {%else %}
+            
+            <a class="nav-link active" id="home" href="/">Home</a>
+            <button class="navbar-toggler">
+            </button>
+
+            <a class="nav-link active" id="dashboard" href="/dashboard">Dashboard</a>
+            <button class="navbar-toggler">
+            </button>
+
+            <a class="nav-link active" id="login" href="/login"> login</a>
+            <button class="navbar-toggler">
+            </button>
+
+            <a class="nav-link active" id="contact" href="/contact">Face any issues? Contact us </a>
+            <button class="navbar-toggler">
+            </button>
+
+            {% endif %}
 
             </div>
         </div>
